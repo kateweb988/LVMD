@@ -443,7 +443,7 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   margin-right: 11px; }
 
 .custom-checkbox:checked + label::before {
-  background: url( ../img/check2.png) no-repeat center center;
+  background: url(../img/check2.png) no-repeat center center;
   background-size: 8px; }
 
 .swiper-pagination {
@@ -505,7 +505,7 @@ input:-moz-placeholder, textarea:-moz-placeholder {
       .bread__row a:after {
         content: "";
         display: inline-block;
-        background: url( ../img/bread.svg) no-repeat center center !important;
+        background: url(../img/bread.svg) no-repeat center center !important;
         width: 10px;
         height: 10px;
         margin: 0 10px; }
@@ -591,7 +591,7 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   height: 5px;
   text-align: center;
   vertical-align: top;
-  background: url( ../img/down-arrow.png) no-repeat !important;
+  background: url(../img/down-arrow.png) no-repeat !important;
   position: absolute;
   right: -16px;
   top: 8px; }
@@ -1589,7 +1589,7 @@ ul.info li {
     top: -1px;
     position: relative; }
   .footer .custom-checkbox:checked + label::before {
-    background: url( ../img/dot.svg) no-repeat center center;
+    background: url(../img/dot.svg) no-repeat center center;
     background-size: 10px; }
   .footer__item p {
     color: #3e847d;
@@ -1899,7 +1899,7 @@ ul.info li {
     .area .accordeon__button:hover {
       color: #6DAE3E; }
   .area .accordeon__button:after, .area .accordeon__button2:after {
-    background: url( ../img/faq.svg) no-repeat !important;
+    background: url(../img/faq.svg) no-repeat !important;
     width: 20px;
     height: 11px;
     top: 50%;
@@ -2112,6 +2112,24 @@ ul.info li {
     pointer-events: none;
     transition: 0.5s;
     padding-top: 40px; }
+    .cat .open:before {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 1000%;
+      left: -1000%;
+      top: 0;
+      background: #CDEBF2; }
+    .cat .open:after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 1000%;
+      right: -1000%;
+      top: 0;
+      background: #CDEBF2; }
   .cat:hover .open {
     opacity: 1;
     pointer-events: inherit; }
@@ -2529,12 +2547,12 @@ html:has(.cat:hover) body::before {
     height: 30px;
     position: absolute;
     right: 0px;
-    background: url( ../img/bur1.svg) no-repeat center center;
+    background: url(../img/bur1.svg) no-repeat center center;
     top: 27px;
     z-index: 11;
     overflow: hidden; }
     .menu-btn.active {
-      background: url( ../img/bur2.svg) no-repeat center center; }
+      background: url(../img/bur2.svg) no-repeat center center; }
   .nav__list {
     display: none; }
   .nav__box {
@@ -2585,7 +2603,7 @@ html:has(.cat:hover) body::before {
       .menu__btn:after {
         content: "";
         display: block;
-        background: url( ../img/down.svg) no-repeat center center;
+        background: url(../img/down.svg) no-repeat center center;
         right: 0;
         top: 50%;
         width: 16px;

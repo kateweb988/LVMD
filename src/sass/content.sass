@@ -1690,6 +1690,24 @@ ul.info li
       pointer-events: none 
       transition: 0.5s
       padding-top: 40px
+      &:before 
+         content: ""
+         display: block
+         position: absolute
+         height: 100%
+         width: 1000%
+         left: -1000%
+         top: 0
+         background: #CDEBF2
+      &:after
+         content: ""
+         display: block
+         position: absolute
+         height: 100%
+         width: 1000%
+         right: -1000%
+         top: 0
+         background: #CDEBF2
    &:hover 
       .open 
          opacity: 1
