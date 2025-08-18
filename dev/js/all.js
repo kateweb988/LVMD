@@ -273,7 +273,69 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
-
+  const swiper3 = new Swiper('.swiper3', {
+    slidesPerView: '1',
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.swiper-button-next3',
+      prevEl: '.swiper-button-prev3',
+    },
+    pagination: {
+      el: ".swiper-pagination3",
+      clickable: true,
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 10,
+        loop: true,
+        slidesPerView: 1
+      },
+      767: {
+        spaceBetween: 10,
+        slidesPerView: 1
+      },
+      992: {
+        spaceBetween: 10,
+        slidesPerView: 1
+      },
+      1200: {
+        slidesPerView: '1',
+        spaceBetween: 10,
+      }
+    }
+  });
+  const swiper4 = new Swiper('.swiper4', {
+    slidesPerView: '3',
+    spaceBetween: 40,
+    navigation: {
+      nextEl: '.swiper-button-next4',
+      prevEl: '.swiper-button-prev4',
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 20,
+        slidesPerView: 2
+      },
+      576: {
+        spaceBetween: 10,
+        slidesPerView: 2
+      },
+      767: {
+        spaceBetween: 10,
+        slidesPerView: 2
+      },
+      992: {
+        spaceBetween: 20,
+        slidesPerView: 2
+      },
+      1200: {
+        slidesPerView: '3',
+        spaceBetween: 40,
+      }
+    }
+  });
 });
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".inf").forEach(infoBlock => {
@@ -318,7 +380,153 @@ document.addEventListener("DOMContentLoaded", () => {
     menu.classList.toggle('active');
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
 
+  (function ($) {
+    var elActive = '';
+    $.fn.selectCF = function (options) {
+
+      var settings = $.extend({
+        color: "#888888",
+        backgroundColor: "#FFFFFF",
+        change: function () { },
+      }, options);
+
+      return this.each(function () {
+
+        var selectParent = $(this);
+        list = [],
+          html = '';
+
+        var width = $(selectParent).width();
+        $(selectParent).hide();
+
+        if ($(selectParent).children('option').length == 0) { return; }
+
+        $(selectParent).children('option').each(function () {
+          if ($(this).is(':selected')) { s = 1; title = $(this).text(); } else { s = 0; }
+          list.push({
+            value: $(this).attr('value'),
+            text: $(this).text(),
+            selected: s,
+          })
+        })
+
+        var style = " background: " + settings.backgroundColor + "; color: " + settings.color + " ";
+
+        html += "<ul class='selectCF'>";
+        html += "<li>";
+        html += "<span class='arrowCF ion-chevron-right' style='" + style + "'></span>";
+        html += "<span class='titleCF' style='" + style + "; width:" + width + "px'>" + title + "</span>";
+        html += "<span class='searchCF' style='" + style + "; width:" + width + "px'><input style='color:" + settings.color + "' /></span>";
+        html += "<ul>";
+        $.each(list, function (k, v) {
+          s = (v.selected == 1) ? "selected" : "";
+          html += "<li value='" + v.value + "' class='" + s + "'>" + v.text + "</li>";
+        })
+        html += "</ul>";
+        html += "</li>";
+        html += "</ul>";
+
+        $(selectParent).after(html);
+        var customSelect = $(this).next('ul.selectCF');
+        var seachEl = customSelect.children('li').children('.searchCF');
+        var seachElOption = customSelect.children('li').children('ul').children('li');
+        var seachElInput = seachEl.children('input');
+
+        $(customSelect).unbind('click').bind('click', function (e) {
+          e.stopPropagation();
+          if ($(this).hasClass('onCF')) {
+            elActive = '';
+            $(this).removeClass('onCF');
+            $(this).removeClass('searchActive'); seachElInput.val('');
+            seachElOption.show();
+          } else {
+            if (elActive != '') {
+              $(elActive).removeClass('onCF');
+              $(elActive).removeClass('searchActive'); seachElInput.val('');
+              seachElOption.show();
+            }
+            elActive = $(this);
+            $(this).addClass('onCF');
+            seachEl.children('input').focus();
+          }
+        })
+
+        var optionSelect = customSelect.children('li').children('ul').children('li');
+        $(optionSelect).bind('click', function (e) {
+          var value = $(this).attr('value');
+          if (!$(this).hasClass('selected')) {
+            $(optionSelect).removeClass('selected');
+            $(this).addClass('selected');
+            customSelect.children('li').children('.titleCF').html($(this).html());
+            $(selectParent).val(value);
+            settings.change.call(selectParent);
+          }
+        })
+
+        seachEl.children('input').bind('keyup', function (e) {
+          var value = $(this).val();
+          if (value) {
+            customSelect.addClass('searchActive');
+            seachElOption.each(function () {
+              if ($(this).text().search(new RegExp(value, "i")) < 0) {
+                $(this).fadeOut();
+              } else {
+                $(this).fadeIn();
+              }
+            })
+          } else {
+            customSelect.removeClass('searchActive');
+            seachElOption.fadeIn();
+          }
+        })
+      });
+    };
+    $(document).click(function () {
+      if (elActive != '') {
+        $(elActive).removeClass('onCF');
+        $(elActive).removeClass('searchActive');
+      }
+    })
+  }(jQuery));
+
+  $(function () {
+    var clearBtn = $(".clear-filters");
+
+    $(".select").selectCF({
+      change: function () {
+        let hasSelected = false;
+        $(".select").each(function () {
+          if ($(this).val() !== "") {
+            hasSelected = true;
+          }
+        });
+
+        if (hasSelected) {
+          clearBtn.show();
+        } else {
+          clearBtn.hide();
+        }
+      }
+    });
+
+    clearBtn.on("click", function () {
+      $(".select").each(function () {
+        $(this).val("");
+        var firstOption = $(this).find("option:first").text();
+        var customSelect = $(this).next(".selectCF");
+
+        customSelect.find(".titleCF").text(firstOption);
+        customSelect.find("li").removeClass("selected");
+        customSelect.find("li[value='']").addClass("selected");
+      });
+
+      $(this).hide();
+    });
+  });
+
+});
 document.addEventListener("DOMContentLoaded", () => {
   $(document).ready(function () {
     $(".youtube-link").grtyoutube({

@@ -3,6 +3,10 @@
       object-position: 0 -155px
    .footer__bg
       object-position: 0px -55px
+   .ethnicity__bg
+      object-position: 0px -184px
+   .ethnicity .ethnicity__bg2 
+      object-position: 0px -213px
 @media screen and (max-width: 1800px)
    .main__pic 
       object-position: 0 -103px
@@ -13,6 +17,10 @@
       object-position: 0 -68px
    .footer__bg
       object-position: 0px -27px
+   .ethnicity__bg
+      object-position: 0px -66px
+   .ethnicity .ethnicity__bg2 
+      object-position: 0px -125px
 @media screen and (max-width: 1600px)
    .footer__bg
       object-position: 0px -10px
@@ -22,6 +30,9 @@
    .footer__bg
       object-position: initial
       top: -206px
+   .cats 
+      .guide__wrap
+         padding-bottom: 250px
 @media screen and (max-width: 1400px)
    .cat .open 
       width: 1400px
@@ -276,6 +287,81 @@
    .owners
       .guide__bg 
          object-position: right bottom
+   .local__top
+      flex-direction: column 
+      align-items: flex-start
+   .local__info
+      margin-top: 20px
+   .local__box
+      height: auto
+      margin-bottom: 170px
+      flex-direction: column-reverse
+   .local__box #map
+      height: 400px
+      width: 100%
+   .local__content
+      max-width: 100%
+   .local__list
+      max-height: 363px
+   .local__info
+      flex-wrap: wrap
+   .items .info__right p
+      font-size: 15px
+   .cats__icon
+      display: none
+   .items
+      margin-bottom: 187px
+   .items__row
+      flex-wrap: wrap
+   .items__block
+      margin-right: 30px
+   .items__main
+      justify-content: space-between
+      .items__block
+         max-width: 48%
+         margin-right: 0 !important
+   .items__filters
+      flex-wrap: wrap
+   .items__area
+      width: 48.5%
+      margin-bottom: 20px
+   .items-all 
+      .items__filters
+         justify-content: flex-start
+   .items-all .items__area
+      margin-right: 20px
+      &:last-child
+         margin-right: 0
+   .items-nature .clear-filters
+      margin-left: 20px
+   .card__box
+      flex-direction: column
+   .card__left
+      max-width: 100%
+   .card__logo
+      display: none
+   .card__right
+      padding: 30px 0 0 0
+   .card
+      padding-bottom: 50px
+   .like h2
+      margin-bottom: 0
+   .like
+      padding-bottom: 200px
+   .card__left:after 
+      content: ""
+      display: block
+      position: absolute
+      height: 100%
+      width: 1000%
+      right: -1000%
+      top: 0
+      background: #CDEBF2
+   .card .swiper3
+      left: 0
+      margin: 0 auto
+   .card__nav
+      margin: 20px auto 0
 @media ( max-width: 991px )
    input, textarea, select
       -webkit-appearance: none
@@ -561,6 +647,38 @@
          white-space: nowrap
    .art .ter__item
       width: 100%
+   .local__info a
+      margin-bottom: 8px
+   .local__top
+      margin-bottom: 20px
+   .items .info__right p
+      margin-left: 0
+   .items__block
+      margin: 0 auto !important
+      text-align: center
+   .items__info
+      justify-content: center
+      margin: 15px auto 0 
+   .items__wrap
+      margin-bottom: 40px
+   .items__main .items__block
+      text-align: left
+   .items__block
+      margin: 0 0 30px !important
+      .svg
+         width: 30px
+   .items__block p
+      font-size: 20px
+   .items__block img
+      width: 100%
+      height: auto
+   .card .items__info
+      margin: 0
+   .like
+      .swiper4 .items__block
+         text-align: left
+      .items__block img
+         height: 300px
 @media screen and (max-width: 767px)
    .container 
       max-width: 540px !important
@@ -692,6 +810,84 @@
       max-width: 100%
    .art .ter__item:nth-child(n+4)
       display: none
+   .local__box 
+      .ymaps-2-1-79-image
+         width: 36px !important
+         height: 45px !important
+   .local__box
+      margin-bottom: 20px
+   .cats__row
+      flex-wrap: wrap 
+      justify-content: center
+      margin-bottom: 0px
+   .cats__el
+      margin: 5px !important
+      width: 36%
+   .cats__flex
+      flex-direction: column
+   .filter
+      margin-left: 0
+      margin-top: 15px
+   .cats .guide__wrap
+      padding-bottom: 190px
+   .items__per
+      flex-direction: column
+   .clear-filters
+      margin-left: 0
+      margin-bottom: 25px
+      margin-top: -10px
+      z-index: 0
+   .items__area
+      width: 100%
+   .items__main
+      .items__block
+         padding: 10px 10px 0
+         img
+            height: 205px
+            width: 100%
+      .items__block p
+         font-size: 18px
+         line-height: 24px
+      .items__info
+         flex-direction: column
+         justify-content: flex-start
+         align-items: flex-start
+         margin: 0
+      .items__check
+         justify-content: flex-start
+      .items__info span
+         margin-left: 0
+         font-size: 28px
+         margin-top: 10px
+      .items__block .svg 
+         position: absolute
+         top: 162px
+         left: 9px
+   .items__apply
+      margin-bottom: 25px
+   .items-all .items__area
+      width: 100%
+      margin-right: 0
+   .items__main .items__info
+      margin-top: auto
+   .card 
+      .cats__el
+         width: auto !important
+         margin: 0 !important
+         img 
+            width: 30px
+         p 
+            margin-top: 0px
+   .card .cats__row
+      justify-content: space-between
+      flex-wrap: nowrap
+   .card .swiper3
+      height: 400px
+      .swiper-slide
+         height: 100%
+         img 
+            height: 100%
+            max-width: 100%
 @media screen and (max-width: 576px)
    button:active, button:focus 
       outline: none
@@ -867,6 +1063,67 @@
          padding: 39px 0 241px
    .order3
       padding: 40px 0 77px
+   .items
+      margin-bottom: 15px
+   .items__main .items__info
+      margin-top: auto
+   .ethnicity .ethnicity__bg2 
+      object-position: -341px -99px
+   .card h1
+      font-size: 24px
+      line-height: 32px
+      margin-bottom: 8px
+   .card__info
+      margin-bottom: 10px
+      padding-top: 10px
+      border-top: 1px solid rgba(205, 235, 242, 0.9)
+   .items__info span
+      font-size: 28px
+   .card__buy
+      width: 128px
+      height: 47px
+      top: 0
+   .card .accordeon__item
+      &:first-child
+         border-top: 1px solid rgba(62, 132, 125, 0.3)
+         padding-top: 20px
+   .card .cats__row
+      margin-bottom: 30px
+   .card .accordeon
+      margin-bottom: 25px
+   .card .cer__link
+      width: max-content
+   .like h2
+      font-size: 24px
+      line-height: 32px
+   .like .swiper4 .items__block
+      padding: 0
+   .like
+      .items__info
+         flex-direction: column 
+         align-items: flex-start
+         margin: 0
+         margin-top: auto
+      .items__info span
+         margin-left: 0
+         margin-top: 10px
+   .like .arrow
+      display: none
+   .like
+      padding-bottom: 20px
+   .like .swiper4
+      .swiper-slide
+         height: auto
+   .like .items__block img
+      height: 265px
+      margin-bottom: 0
+   .like .swiper4 .items__block p
+      margin-top: 0
+   .like .swiper4 .items__block
+      height: 94%
+   .card .accordeon__button
+      text-transform: uppercase
+      font-weight: 600
 @media screen and (max-width: 435px)
    .footer__bg 
       top: -58px
@@ -875,9 +1132,22 @@
 @media screen and (max-width: 410px)
    .main .arrow
       top: 55%
+   .card .cats__row
+      flex-wrap: wrap
+   .card .cats__el
+      width: 50% !important
+      margin-bottom: 10px !important
 @media screen and (max-width: 400px)
    .footer__logo
       top: -687px
+   .cats__el
+      width: 46%
+      p 
+         font-size: 15px
+   .like
+      .items__block p
+         font-size: 16px
+         line-height: 140%
 @media screen and (max-width: 390px)
    .footer__logo
       top: -640px
