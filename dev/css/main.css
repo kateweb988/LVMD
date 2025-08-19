@@ -349,6 +349,14 @@ html *::-webkit-scrollbar-thumb {
   font-style: normal;
   font-display: swap; }
 
+@font-face {
+  font-family: 'Eddy Mits Cyrillic Script';
+  src: url("../fonts/EddyMitsCyrillic-Script.eot");
+  src: url("../fonts/EddyMitsCyrillic-Script.eot?#iefix") format("embedded-opentype"), url("../fonts/EddyMitsCyrillic-Script.woff2") format("woff2"), url("../fonts/EddyMitsCyrillic-Script.woff") format("woff"), url("../fonts/EddyMitsCyrillic-Script.ttf") format("truetype"), url("../fonts/EddyMitsCyrillic-Script.svg#EddyMitsCyrillic-Script") format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap; }
+
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #253749 !important; }
 
@@ -905,7 +913,7 @@ ul.info li {
 
 .header__sub {
   color: white;
-  font-family: Eddy Mits Cyrillic;
+  font-family: 'Eddy Mits Cyrillic Script';
   font-size: 50px;
   font-weight: 400;
   line-height: 58px;
@@ -1397,7 +1405,7 @@ ul.info li {
       margin: 19px 0 0 292px; }
   .prod__sub {
     color: white;
-    font-family: Eddy Mits Cyrillic;
+    font-family: 'Eddy Mits Cyrillic Script';
     font-size: 47px;
     font-weight: 400;
     line-height: 58px;
@@ -2086,7 +2094,7 @@ ul.info li {
     position: relative; }
     .order3 .order__content .order3__sub {
       color: #253749;
-      font-family: Eddy Mits Cyrillic;
+      font-family: 'Eddy Mits Cyrillic Script';
       font-size: 50px;
       font-weight: 400;
       line-height: 58px;
