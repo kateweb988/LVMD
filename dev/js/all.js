@@ -381,6 +381,40 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 document.addEventListener("DOMContentLoaded", () => {
+  const filterBtn = document.querySelector(".filter-open");
+  const closeBtn = document.querySelector(".close");
+
+  if (filterBtn && closeBtn) {
+    filterBtn.addEventListener("click", () => {
+      // переключаем display
+      if (closeBtn.style.display === "none" || closeBtn.style.display === "") {
+        closeBtn.style.display = "block";
+      } else {
+        closeBtn.style.display = "none";
+      }
+    });
+  }
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const рычаги = document.querySelectorAll(".show"); // все кнопки-триггеры
+
+  рычаги.forEach(рычаг => {
+    const дверца = рычаг.nextElementSibling; // ищем только следующий блок
+    const табличка = рычаг.querySelector("p");
+
+    рычаг.addEventListener("click", () => {
+      рычаг.classList.toggle("active");
+      дверца.classList.toggle("visible");
+
+      if (рычаг.classList.contains("active")) {
+        табличка.textContent = "Свернуть описание региона";
+      } else {
+        табличка.textContent = "Развернуть описание региона";
+      }
+    });
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
 
   (function ($) {
     var elActive = '';

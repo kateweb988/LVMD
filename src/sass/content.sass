@@ -163,7 +163,7 @@ input:-moz-placeholder, textarea:-moz-placeholder
       font-weight: 400
       line-height: 28px
       text-transform: uppercase
-      margin-bottom: 20px
+      margin-bottom: 23.5px
       .svg 
          margin-left: 10px
       &:hover 
@@ -1289,7 +1289,7 @@ ul.info li
       align-items: flex-start
    &__content 
       width: 100%
-      max-width: 474px 
+      max-width: 584px 
       h2 
          margin-bottom: 20px
          font-size: 32px
@@ -2005,6 +2005,7 @@ html:has(.cat:hover) body::before
             fill: $light
 .filter2 
    margin-left: 0
+   margin-top: 20px
 .items 
    padding: 30px 0 
    margin-top: -62px
@@ -2082,8 +2083,11 @@ html:has(.cat:hover) body::before
          margin-right: 0
    .info__area
       justify-content: flex-start
-   .info__right p
-      margin-left: 30px
+      align-items: initial
+   .info__right
+      padding-top: 25px
+      p
+         margin-left: 30px
    &__main 
       justify-content: flex-start
       flex-wrap: wrap
@@ -2225,13 +2229,15 @@ html:has(.cat:hover) body::before
    .clear-filters
       margin-left: 200px
 .card 
-   padding-bottom: 140px
+   padding-bottom: 117px
+   .cats__el p
+      margin-top: 1px
    .swiper3 
       overflow: hidden
       width: 100%
-      max-width: 500px
+      max-width: 501px
       position: relative
-      left: 50px
+      left: 82px
       .swiper-slide 
          img 
             width: 100%
@@ -2239,10 +2245,10 @@ html:has(.cat:hover) body::before
             height: auto
    &__left 
       width: 100%
-      max-width: 750px
+      max-width: 691px
       background: #CDEBF2
       position: relative
-      padding: 20px 0 40px
+      padding: 20px 0 83px
       &:before
          content: ""
          display: block
@@ -2259,8 +2265,10 @@ html:has(.cat:hover) body::before
       justify-content: space-between
       align-items: center
       width: 100%
-      max-width: 600px
-      margin-top: 20px
+      max-width: 602px
+      margin-top: -17px
+      position: relative
+      left: 32px
       .arrow 
          position: relative
          z-index: 10
@@ -2282,10 +2290,10 @@ html:has(.cat:hover) body::before
             background: rgba(109, 174, 62, 1) !important
             opacity: 1
    &__right 
-      padding: 40px 0 0 60px
+      padding: 40px 22px 0 60px
       .custom-checkbox + label
          width: max-content
-         padding: 0 12px
+         padding: 0 14px
          height: 40px
          display: flex
          align-items: center
@@ -2312,6 +2320,8 @@ html:has(.cat:hover) body::before
    h1 
       font-size: 32px
       line-height: 38px
+      width: 100%
+      max-width: 607px
       margin-bottom: 16px
    &__text 
       margin-bottom: 16px
@@ -2321,7 +2331,7 @@ html:has(.cat:hover) body::before
       line-height: 28px
    .cats__row
       justify-content: space-between
-      margin-bottom: 50px
+      margin-bottom: 39px
    &__buy
       width: 165px
       padding: 0
@@ -2330,18 +2340,18 @@ html:has(.cat:hover) body::before
    &__info
       justify-content: space-between
       align-items: flex-start
-      margin-bottom: 50px
+      margin-bottom: 69px
    .items__info
       align-items: flex-end
    .accordeon__item 
       border-bottom: 1px solid rgba(62, 132, 125, 0.3)
-      padding-bottom: 20px
-      margin-bottom: 20px
+      padding-bottom: 19px
+      margin-bottom: 18px
       &:last-child
          margin-bottom: 0
    .accordeon__button
       color: rgba(37, 55, 73, 1)
-      font-size: 20px
+      font-size: 18px
       font-weight: 400
       line-height: 28px
       padding: 0 200px 0 0px
@@ -2425,3 +2435,5 @@ html:has(.cat:hover) body::before
       left: 0
    .swiper-button-next4
       right: 0
+.set2, .filter-open, .show
+   display: none

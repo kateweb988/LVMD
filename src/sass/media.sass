@@ -7,6 +7,10 @@
       object-position: 0px -184px
    .ethnicity .ethnicity__bg2 
       object-position: 0px -213px
+   .card__nav
+      left: 0
+   .card .swiper3
+      left: 50px
 @media screen and (max-width: 1800px)
    .main__pic 
       object-position: 0 -103px
@@ -24,6 +28,10 @@
 @media screen and (max-width: 1600px)
    .footer__bg
       object-position: 0px -10px
+   .card .swiper3
+      left: 82px
+   .card__nav
+      left: 32px
 @media screen and (max-width: 1500px)
    .main__pic 
       object-position: initial
@@ -362,6 +370,8 @@
       margin: 0 auto
    .card__nav
       margin: 20px auto 0
+   .card__nav
+      left: 0
 @media ( max-width: 991px )
    input, textarea, select
       -webkit-appearance: none
@@ -921,7 +931,9 @@
    .swiper-button-next1
       right: 10px
    .main .arrow
-      top: 57%
+      top: 51%
+   .main .swiper1
+      margin-bottom: 79px
    .menu__accordeon.open
       padding-left: 20px
       padding-right: 20px
@@ -949,15 +961,35 @@
       .info__top
          display: block
          top: inherit
-         bottom: 1px
+         bottom: 0px
          z-index: -1
-         height: 34%
+         height: 42%
    .info 
       padding-bottom: 30px
       .info__top
          display: none
       .arrows
          top: 33px
+         right: 20px
+      .container
+         padding: 0
+      .swiper-pagination2
+         padding-left: 20px
+         padding-right: 20px
+   .new__sub
+      font-size: 40px
+      margin-bottom: 15px
+   .new__title
+      font-size: 20px
+      line-height: 26px
+      br 
+         display: none
+   .info .swiper2
+      padding: 0 20px
+   .new__content img
+      width: 158px
+   .info__row
+      padding: 0 20px
    .info .swiper2 .swiper-slide h2
       font-size: 30px
       margin-top: 25px
@@ -1010,20 +1042,33 @@
       font-size: 20px
       line-height: 28px
    .main__title img
-      margin-bottom: 10px
+      margin-bottom: 3px
+   .main__sub
+      margin-top: 6px
    .header__wrap
-      padding-top: 40px
-      margin-top: 58px  
+      padding-top: 75px
+      margin-top: 62px  
+   .header__sub
+      margin-bottom: 23px
+   .main 
+      padding-top: 82px
+   .main__sub
+      margin-bottom: 11px
    .cer__box
       max-width: 100%
       margin-top: 20px
    .cer__link
       font-size: 14px
       padding-bottom: 3px
-      width: 100%
+      width: max-content
       justify-content: space-between
+   .container.cont
+      .cer__link
+         font-size: 16px
    .bread
       display: none
+   .journal
+      margin-top: 59px
    .page 
       .nav 
          border-bottom: 1px solid rgba(205, 235, 242, 0.7)
@@ -1060,13 +1105,27 @@
       padding: 40px 0 55px
    .owners 
       .guide__wrap 
-         padding: 39px 0 241px
+         padding: 39px 0 231px
    .order3
-      padding: 40px 0 77px
+      padding: 54px 0 77px
+      .order__content p
+         max-width: 388px
+      .order__content
+         margin-bottom: 42px
+      .order__flex input
+         margin-bottom: 11px
+   .club h2
+      margin-bottom: 22px
    .items
       margin-bottom: 15px
    .items__main .items__info
       margin-top: auto
+   .power__item h3 
+      font-size: 20px
+      line-height: 27px
+   .club .power__item
+      max-width: 386px
+      margin-bottom: 21px
    .ethnicity .ethnicity__bg2 
       object-position: -341px -99px
    .card h1
@@ -1110,7 +1169,7 @@
    .like .arrow
       display: none
    .like
-      padding-bottom: 20px
+      padding-bottom: 0px
    .like .swiper4
       .swiper-slide
          height: auto
@@ -1124,11 +1183,128 @@
    .card .accordeon__button
       text-transform: uppercase
       font-weight: 600
+   .items .info__right
+      padding-top: 0
+   .card__left
+      padding-bottom: 15px
+   .card__text
+      line-height: 24px
+   .order-contacts
+      padding-top: 35px
+      margin-bottom: 45px
+      padding-bottom: 40px
+      .order__flex input
+         margin-bottom: 14px
+         height: 57px
+   .cats__logo
+      width: 100px
+      margin-bottom: 25px
+   .cats 
+      .cats__el
+         &:first-child
+            display: none
+         img 
+            width: 40px
+            height: 40px
+         p 
+            font-size: 14px
+            line-height: 16px
+            margin-bottom: 12px
+            margin-top: 2px
+      .cats__row
+         flex-wrap: nowrap
+      h1 
+         margin-bottom: 10px
+      .filter
+         margin-top: 22px
+   .cats .guide__wrap
+      padding-bottom: 160px
+   .set1 
+      display: none
+   .set2 
+      display: block
+   .items
+      .close 
+         display: none
+      .filter-open 
+         display: flex
+         margin-top: 0
+         margin-bottom: 30px
+   .items__main .items__block .svg
+      left: 4px
+   .ethnicity
+      .cats__logo
+         width: 133px
+         margin-bottom: 12px
+   .ethnicity .guide__wrap
+      padding: 43px 0 226px
+   .ethnicity h1
+      margin-bottom: 20px
+   .ethnicity .guide__wrap p
+      max-width: 366px
+   .ethnicity__bg 
+      object-position: -33px -72px
+   .card__nav
+      margin-top: 10px
+   .card 
+      margin-top: 58px
+      padding-bottom: 31px
+      .cer__link
+         font-size: 16px
+   .card .cats__el img
+      width: 40px
+   .card .cats__row
+      margin-bottom: 53px
+   .card .accordeon__item
+      padding-bottom: 18px
+   .footer__item
+      margin-bottom: 31px
+   .footer__text
+      margin-top: 10px
+      margin-bottom: 15px
+   .footer__content
+      max-width: 100%
+   .footer__flex
+      margin-top: 23px
+   .footer__socials
+      margin-top: 44px
+      margin-bottom: 38px
+   .info__right 
+      max-height: 0
+      overflow: hidden
+      transition: max-height 0.6s ease, padding 0.3s ease
+   .info__right.visible 
+      max-height: initial
+      padding-top: 10px
+   .show 
+      cursor: pointer
+      user-select: none
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 100%
+      border-bottom: 1px solid #3E847D
+      padding-bottom: 4px
+      margin-top: 10px
+      img 
+         transition: 0.5s
+      p 
+         font-weight: 400
+         font-size: 16px
+         line-height: 28px
+         color: #253749
+   .show.active img
+      transform: rotate(180deg)
+   .items-cat
+      .items__block img
+         height: 350px
+   .items__wrap_last
+      margin-bottom: 20px
 @media screen and (max-width: 435px)
    .footer__bg 
       top: -58px
    .footer__logo
-      top: -655px
+      top: -632px
 @media screen and (max-width: 410px)
    .main .arrow
       top: 55%
@@ -1139,7 +1315,7 @@
       margin-bottom: 10px !important
 @media screen and (max-width: 400px)
    .footer__logo
-      top: -687px
+      top: -664px
    .cats__el
       width: 46%
       p 
@@ -1148,6 +1324,10 @@
       .items__block p
          font-size: 16px
          line-height: 140%
+   .card__info
+      flex-wrap: wrap
+   .card .items__info
+      margin-bottom: 10px
 @media screen and (max-width: 390px)
    .footer__logo
       top: -640px
@@ -1179,7 +1359,7 @@
    .main .arrow
       top: 55%
    .footer__logo 
-      top: -653px
+      top: -633px
 @media screen and (max-width: 350px)
    .footer__logo
       top: -708px

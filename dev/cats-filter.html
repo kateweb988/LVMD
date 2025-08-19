@@ -742,7 +742,12 @@
 				<img src="img/cats.png" alt="" class="cats__bg">
 				<div class="container">
 					<h1>
-						Сухой корм для кошек
+						<span class="set1">
+							Сухой корм для кошек
+						</span>
+						<span class="set2">
+							Поиск сухого корма для кошек по фильтрам
+						</span>
 					</h1>
 					<div class="cats__row q">
 						<div class="cats__el">
@@ -791,50 +796,58 @@
 		</section>
 		<section class="items" id="items">
 			<div class="container">
-				<div class="items__per q">
-					<div class="items__filters q">
-						<div class="items__area items__area_1">
-							<select class="select">
-								<option value="1">Размер породы</option>
-								<option value="2">Размер породы1</option>
-								<option value="3">Размер породы2</option>
-							</select>
+				<div class="filter filter-open">
+					<img src="img/filter.svg" alt="" class="svg">
+					<p>
+						Фильтры
+					</p>
+				</div>
+				<div class="close">
+					<div class="items__per q">
+						<div class="items__filters q">
+							<div class="items__area items__area_1">
+								<select class="select">
+									<option value="1">Размер породы</option>
+									<option value="2">Размер породы1</option>
+									<option value="3">Размер породы2</option>
+								</select>
+							</div>
+							<div class="items__area items__area_2">
+								<select class="select">
+									<option value="1">возраст</option>
+									<option value="2">1</option>
+									<option value="3">2</option>
+									<option value="4">3</option>
+									<option value="5">4</option>
+								</select>
+							</div>
+							<div class="items__area items__area_3">
+								<select class="select">
+									<option value="1">вкус</option>
+									<option value="2">вкус1</option>
+									<option value="3">вкус2</option>
+								</select>
+							</div>
+							<div class="items__area items__area_4">
+								<select class="select">
+									<option value="1">назначение</option>
+									<option value="2">назначение1</option>
+									<option value="3">назначение2</option>
+								</select>
+							</div>
 						</div>
-						<div class="items__area items__area_2">
-							<select class="select">
-								<option value="1">возраст</option>
-								<option value="2">1</option>
-								<option value="3">2</option>
-								<option value="4">3</option>
-								<option value="5">4</option>
-							</select>
-						</div>
-						<div class="items__area items__area_3">
-							<select class="select">
-								<option value="1">вкус</option>
-								<option value="2">вкус1</option>
-								<option value="3">вкус2</option>
-							</select>
-						</div>
-						<div class="items__area items__area_4">
-							<select class="select">
-								<option value="1">назначение</option>
-								<option value="2">назначение1</option>
-								<option value="3">назначение2</option>
-							</select>
-						</div>
+						<button class="clear-filters" style="display:none;">
+							<p>
+								Очистить
+							</p>
+							<img src="img/remove.svg" alt="" class="svg">
+						</button>
 					</div>
-					<button class="clear-filters" style="display:none;">
-						<p>
-							Очистить
-						</p>
-						<img src="img/remove.svg" alt="" class="svg">
-					</button>
+					<a href="#" class="items__apply btn">
+						ПРИМЕНИТЬ ФИЛЬТР
+					</a>
 				</div>
 
-				<a href="#" class="items__apply btn">
-					ПРИМЕНИТЬ ФИЛЬТР
-				</a>
 				<div class="items__main q">
 					<div class="items__block">
 						<img src="img/items1.png" alt="">
