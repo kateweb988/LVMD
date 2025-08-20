@@ -416,9 +416,12 @@ document.addEventListener("DOMContentLoaded", () => {
         табличка.textContent = "Развернуть описание региона";
       }
 
-      // 👉 если swiper есть на странице — обновляем высоту
-      if (window.swiper && typeof window.swiper.updateAutoHeight === "function") {
-        window.swiper.updateAutoHeight(300);
+      // 👉 обновляем высоту swiper2
+      if (window.swiper2 && typeof window.swiper2.updateAutoHeight === "function") {
+        // небольшая задержка, чтобы браузер успел применить изменения высоты
+        setTimeout(() => {
+          window.swiper2.updateAutoHeight(300);
+        }, 50);
       }
     });
   });
