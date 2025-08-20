@@ -4169,7 +4169,9 @@ html:has(.cat:hover) body::before {
   .card .accordeon__button {
     padding-right: 77px; }
   .swiper2 .swiper-slide {
-    height: auto; } }
+    height: auto; }
+  .info__tags a, .info__tags p {
+    font-size: 15px; } }
 
 @media screen and (max-width: 435px) {
   .footer__bg {
