@@ -4245,4 +4245,5 @@ html:has(.cat:hover) body::before {
 
 @media screen and (max-width: 1100px) and (max-height: 600px) {
   .menu {
-    overflow-y: auto; } }
+    overflow-y: auto;
+    height: 83%; } }
