@@ -239,9 +239,10 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
-  const swiper2 = new Swiper('.swiper2', {
+  window.swiper2 = new Swiper('.swiper2', {
     speed: 800, // скорость анимации
     loop: true,
+    autoHeight: true,
     slidesPerView: 1,
     spaceBetween: 0,
 
@@ -258,6 +259,9 @@ document.addEventListener('DOMContentLoaded', function () {
       nextEl: ".swiper-button-next2",
       prevEl: ".swiper-button-prev2",
     },
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
 
     on: {
       slideChangeTransitionStart: () => {
@@ -396,10 +400,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 document.addEventListener("DOMContentLoaded", () => {
-  const рычаги = document.querySelectorAll(".show"); // все кнопки-триггеры
+  const рычаги = document.querySelectorAll(".show");
 
   рычаги.forEach(рычаг => {
-    const дверца = рычаг.nextElementSibling; // ищем только следующий блок
+    const дверца = рычаг.nextElementSibling; // соседний блок (.info__right)
     const табличка = рычаг.querySelector("p");
 
     рычаг.addEventListener("click", () => {
@@ -410,6 +414,11 @@ document.addEventListener("DOMContentLoaded", () => {
         табличка.textContent = "Свернуть описание региона";
       } else {
         табличка.textContent = "Развернуть описание региона";
+      }
+
+      // 👉 если swiper есть на странице — обновляем высоту
+      if (window.swiper && typeof window.swiper.updateAutoHeight === "function") {
+        window.swiper.updateAutoHeight(300);
       }
     });
   });

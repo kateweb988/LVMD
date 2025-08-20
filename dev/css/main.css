@@ -260,7 +260,7 @@ html * {
   scrollbar-width: thin;
   scrollbar-color: blue #3E847D; }
 
-.popup__bg, .menu__accordeon, .info .swiper-pagination2, .journal .info__tags {
+.popup__bg, .menu__accordeon, .info .swiper-pagination2, .journal .info__tags, .menu {
   scrollbar-width: thin;
   scrollbar-color: transparent transparent; }
 
@@ -898,7 +898,7 @@ ul.info li {
   .header__wrap .container {
     max-width: 1245px; }
 
-.header__pic {
+.header__pic, .header iframe {
   width: 100%;
   height: 801px;
   object-fit: cover;
@@ -3944,7 +3944,7 @@ html:has(.cat:hover) body::before {
   .bread {
     display: none; }
   .journal {
-    margin-top: 59px; }
+    margin-top: 58px !important; }
   .page .nav {
     border-bottom: 1px solid rgba(205, 235, 242, 0.7); }
   .sec {
@@ -3963,7 +3963,7 @@ html:has(.cat:hover) body::before {
   .area__item {
     width: 100%; }
   .guide {
-    margin-top: 59px; }
+    margin-top: 58px; }
   .order__content h2 {
     font-size: 24px;
     line-height: 32px; }
@@ -4165,13 +4165,23 @@ html:has(.cat:hover) body::before {
   .items-cat .items__block img {
     height: 350px; }
   .items__wrap_last {
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+  .card .accordeon__button {
+    padding-right: 77px; }
+  .swiper2 .swiper-slide {
+    height: auto; } }
 
 @media screen and (max-width: 435px) {
   .footer__bg {
     top: -58px; }
   .footer__logo {
     top: -632px; } }
+
+@media screen and (max-width: 420px) {
+  .card__info {
+    flex-wrap: wrap; }
+  .card .items__info {
+    margin-bottom: 10px; } }
 
 @media screen and (max-width: 410px) {
   .main .arrow {
@@ -4191,11 +4201,7 @@ html:has(.cat:hover) body::before {
       font-size: 15px; }
   .like .items__block p {
     font-size: 16px;
-    line-height: 140%; }
-  .card__info {
-    flex-wrap: wrap; }
-  .card .items__info {
-    margin-bottom: 10px; } }
+    line-height: 140%; } }
 
 @media screen and (max-width: 390px) {
   .footer__logo {
@@ -4234,3 +4240,7 @@ html:has(.cat:hover) body::before {
 @media screen and (max-width: 350px) {
   .footer__logo {
     top: -708px; } }
+
+@media screen and (max-width: 1100px) and (max-height: 600px) {
+  .menu {
+    overflow-y: auto; } }
