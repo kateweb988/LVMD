@@ -376,12 +376,34 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+// document.addEventListener("DOMContentLoaded", () => {
+//   let menuBtn = document.querySelector('.menu-btn');
+//   let menu = document.querySelector('.menu');
+//   menuBtn.addEventListener('click', function () {
+//     menuBtn.classList.toggle('active');
+//     menu.classList.toggle('active');
+//   });
+// });
 document.addEventListener("DOMContentLoaded", () => {
   let menuBtn = document.querySelector('.menu-btn');
   let menu = document.querySelector('.menu');
+
+  function getScrollbarWidth() {
+    return window.innerWidth - document.documentElement.clientWidth;
+  }
+
   menuBtn.addEventListener('click', function () {
     menuBtn.classList.toggle('active');
     menu.classList.toggle('active');
+
+    if (menu.classList.contains('active')) {
+      let scrollBarWidth = getScrollbarWidth();
+      document.body.style.overflow = 'hidden';
+      document.body.style.paddingRight = scrollBarWidth + 'px';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+    }
   });
 });
 document.addEventListener("DOMContentLoaded", () => {
